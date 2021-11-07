@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { RaceEvent } from 'src/app/shared/raceevent.model';
 
 @Component({
   selector: 'app-events-list',
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class EventsListComponent implements OnInit {
 
   @Input()
-  public events: string[] | undefined;
+  public events: RaceEvent[] | undefined;
 
   constructor() { }
 

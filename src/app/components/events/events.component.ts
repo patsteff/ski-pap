@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Discipline, RaceEvent } from 'src/app/shared/raceevent.model';
 
 @Component({
   selector: 'app-event',
@@ -7,7 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  public events = ["test", "test2"];
+  public events: RaceEvent[] = [
+    {
+      name: "test name",
+      location: "Diavolezza",
+      startDate: "tadkf",
+      infos: "test infos",
+      discipline: Discipline.DH,
+      tore: 36
+    },
+    {
+      name: "test name 2",
+      location: "Züri",
+      startDate: "2312",
+      infos: "test infos",
+      discipline: Discipline.SL,
+      tore: 36
+    }
+  ];
 
   constructor() { }
 
