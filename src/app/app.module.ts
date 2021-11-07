@@ -10,16 +10,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EventComponent } from './components/event/event.component';
-import { MainNavComponent } from './main-nav/main-nav.component';
+import { EventsComponent } from './components/events/events.component';
+import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
+import { AthletesComponent } from './components/athletes/athletes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventComponent,
-    MainNavComponent
+    EventsComponent,
+    MainNavComponent,
+    AthletesComponent
   ],
   imports: [
     BrowserModule,
