@@ -15,13 +15,17 @@ import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
 import { AthletesComponent } from './components/athletes/athletes.component';
+import { EventsListComponent } from './components/events/events-list/events-list.component';
+import { EventItemComponent } from './components/events/event-item/event-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventsComponent,
     MainNavComponent,
-    AthletesComponent
+    AthletesComponent,
+    EventsListComponent,
+    EventItemComponent
   ],
   imports: [
     BrowserModule,

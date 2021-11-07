@@ -1,1 +1,12 @@
 <p>event works!</p>
+<div class="content-container">
+  <div class="title">
+    <h1>Events</h1>
+  </div>
+  <div class="create-event-wrapper">
+    <button mat-raised-button color="primary" (click)="openDialog()">Training erstellen</button>
+  </div>
+  <div class="event-list-container">
+    <app-events-list [events]="events"></app-events-list>
+  </div>
+</div>

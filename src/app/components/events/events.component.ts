@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
+  public events = ["test", "test2"];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openDialog() {
+    console.log("open dialogue")
   }
 
 }
