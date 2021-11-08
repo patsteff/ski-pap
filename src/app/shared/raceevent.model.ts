@@ -1,7 +1,7 @@
 export interface RaceEvent {
   id?: string;
   location: string;
-  startDate: string;
+  startDate: Date;
   club: string;
   infos?: string;
   discipline: string;

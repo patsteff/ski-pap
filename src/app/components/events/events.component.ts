@@ -10,22 +10,14 @@ import { EventsDialogComponent } from './events-dialog/events-dialog.component';
 export class EventsComponent implements OnInit {
 
   public events: RaceEvent[] = [
-    {
-      location: "Diavolezza",
-      startDate: "tadkf",
-      infos: "test infos",
-      club: "BSV",
-      discipline: "SL",
-      tore: 36
-    },
-    {
-      location: "Züri",
-      startDate: "2312",
-      infos: "test infos",
-      club: "BSV",
-      discipline: "DH",
-      tore: 36
-    }
+    //{
+    //  location: "Züri",
+    //  startDate: "2312",
+    //  infos: "test infos",
+    //  club: "BSV",
+    //  discipline: "DH",
+    //  tore: 36
+    // }
   ];
 
   constructor(public dialog: MatDialog) { }

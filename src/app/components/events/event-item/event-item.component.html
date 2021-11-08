@@ -1,1 +1,21 @@
-<p>{{event?.location}}</p>
+<mat-card>
+  <mat-card-title>{{event?.startDate | momentPipe: 'DD.MM.YYYY'}}</mat-card-title>
+  <mat-card-content class="event-card-content" fxLayout="column">
+    <span>
+      <mat-icon class="event-card-icon">location_on</mat-icon>
+      {{event?.location}}
+    </span>
+    <span>
+      <mat-icon class="event-card-icon">downhill_skiing</mat-icon>
+      {{event?.discipline}}
+    </span>
+    <span>
+      <mat-icon class="event-card-icon">numbers</mat-icon>
+      {{event?.tore}}
+    </span>
+    <span>
+      <mat-icon class="event-card-icon">info</mat-icon>
+      {{event?.infos}}
+    </span>
+  </mat-card-content>
+</mat-card>

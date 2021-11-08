@@ -13,7 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +26,7 @@ import { AthletesComponent } from './components/athletes/athletes.component';
 import { EventsListComponent } from './components/events/events-list/events-list.component';
 import { EventItemComponent } from './components/events/event-item/event-item.component';
 import { EventsDialogComponent } from './components/events/events-dialog/events-dialog.component';
+import { MomentPipe } from './shared/moment.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { EventsDialogComponent } from './components/events/events-dialog/events-
     AthletesComponent,
     EventsListComponent,
     EventItemComponent,
-    EventsDialogComponent
+    EventsDialogComponent,
+    MomentPipe
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,7 @@ import { EventsDialogComponent } from './components/events/events-dialog/events-
     MatMomentDateModule,
     MatRadioModule,
     MatFormFieldModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],

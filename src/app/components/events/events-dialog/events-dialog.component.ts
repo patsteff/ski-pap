@@ -2,6 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { RaceEvent } from 'src/app/shared/raceevent.model';
+import { EventService } from 'src/app/shared/services/event.service';
 
 @Component({
   selector: 'app-events-dialog',
@@ -13,7 +14,7 @@ export class EventsDialogComponent {
 
   constructor(public dialogRef: MatDialogRef<EventsDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data: RaceEvent,
-    private fb: FormBuilder
+    private fb: FormBuilder, private eventService: EventService
   ) {
     this.form = fb.group({
       location: [data.location, [Validators.maxLength(30), Validators.required]],
@@ -30,7 +31,9 @@ export class EventsDialogComponent {
     if (this.form.valid) {
       this.dialogRef.close(this.form.value);
     }
-    console.log(this.form.value)
+    console.log(this.form.value);
+    this.eventService.onCreateEvent(this.form.value)
+
   }
 
   onCancelClick(): void {
