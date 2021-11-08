@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Base and variables*/
+@import "assets/styles/variables";
+@import "assets/styles/base";
+
+/* Components styles*/
+@import "assets/styles/components/main-nav.component";
+@import "assets/styles/components/events.component";
+@import "assets/styles/components/athletes.component";
+
+

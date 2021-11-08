@@ -5,8 +5,7 @@ import { RaceEvent } from 'src/app/shared/raceevent.model';
 
 @Component({
   selector: 'app-events-dialog',
-  templateUrl: './events-dialog.component.html',
-  styleUrls: ['./events-dialog.component.scss']
+  templateUrl: './events-dialog.component.html'
 })
 export class EventsDialogComponent {
 
@@ -19,7 +18,10 @@ export class EventsDialogComponent {
     this.form = fb.group({
       location: [data.location, [Validators.maxLength(30), Validators.required]],
       startDate: [data.startDate, Validators.required],
+      club: ["BSV"],
       infos: [data.infos, Validators.maxLength(100)],
+      discipline: [data.discipline],
+      tore: [data.tore, [Validators.required, Validators.max(500), Validators.pattern('[0-9]*$')]],
       id: [data.id],
     });
   }
@@ -28,6 +30,7 @@ export class EventsDialogComponent {
     if (this.form.valid) {
       this.dialogRef.close(this.form.value);
     }
+    console.log(this.form.value)
   }
 
   onCancelClick(): void {

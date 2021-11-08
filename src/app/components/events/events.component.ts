@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Discipline, RaceEvent } from 'src/app/shared/raceevent.model';
+import { RaceEvent } from 'src/app/shared/raceevent.model';
 import { EventsDialogComponent } from './events-dialog/events-dialog.component';
 
 @Component({
   selector: 'app-event',
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.scss']
+  templateUrl: './events.component.html'
 })
 export class EventsComponent implements OnInit {
 
@@ -15,14 +14,16 @@ export class EventsComponent implements OnInit {
       location: "Diavolezza",
       startDate: "tadkf",
       infos: "test infos",
-      discipline: Discipline.DH,
+      club: "BSV",
+      discipline: "SL",
       tore: 36
     },
     {
       location: "Züri",
       startDate: "2312",
       infos: "test infos",
-      discipline: Discipline.SL,
+      club: "BSV",
+      discipline: "DH",
       tore: 36
     }
   ];

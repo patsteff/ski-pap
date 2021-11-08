@@ -9,8 +9,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -52,11 +54,13 @@ import { EventsDialogComponent } from './components/events/events-dialog/events-
     MatListModule,
     MatDatepickerModule,
     MatDialogModule,
-    MatFormFieldModule,
     MatInputModule,
-
+    MatMomentDateModule,
+    MatRadioModule,
+    MatFormFieldModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

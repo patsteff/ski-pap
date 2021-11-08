@@ -3,8 +3,7 @@ import { RaceEvent } from 'src/app/shared/raceevent.model';
 
 @Component({
   selector: 'app-event-item',
-  templateUrl: './event-item.component.html',
-  styleUrls: ['./event-item.component.scss']
+  templateUrl: './event-item.component.html'
 })
 export class EventItemComponent implements OnInit {
 

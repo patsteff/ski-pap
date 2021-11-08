@@ -5,8 +5,7 @@ import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-main-nav',
-  templateUrl: './main-nav.component.html',
-  styleUrls: ['./main-nav.component.scss']
+  templateUrl: './main-nav.component.html'
 })
 export class MainNavComponent {
 
@@ -16,6 +15,6 @@ export class MainNavComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
 }

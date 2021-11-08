@@ -1,15 +1,9 @@
-export enum Discipline {
-  SL,
-  GS,
-  SG,
-  DH
-}
-
 export interface RaceEvent {
   id?: string;
   location: string;
   startDate: string;
+  club: string;
   infos?: string;
-  discipline: Discipline;
+  discipline: string;
   tore: number;
 }
