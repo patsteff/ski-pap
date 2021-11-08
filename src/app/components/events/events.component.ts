@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Discipline, RaceEvent } from 'src/app/shared/raceevent.model';
+import { EventsDialogComponent } from './events-dialog/events-dialog.component';
 
 @Component({
   selector: 'app-event',
@@ -10,7 +12,6 @@ export class EventsComponent implements OnInit {
 
   public events: RaceEvent[] = [
     {
-      name: "test name",
       location: "Diavolezza",
       startDate: "tadkf",
       infos: "test infos",
@@ -18,7 +19,6 @@ export class EventsComponent implements OnInit {
       tore: 36
     },
     {
-      name: "test name 2",
       location: "Züri",
       startDate: "2312",
       infos: "test infos",
@@ -27,13 +27,16 @@ export class EventsComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  openDialog() {
-    console.log("open dialogue")
+  openDialog(): void {
+    this.dialog.open(EventsDialogComponent, {
+      width: '800px',
+      data: {},
+    });
   }
 
 }

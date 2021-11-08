@@ -6,7 +6,6 @@ export enum Discipline {
 }
 
 export interface RaceEvent {
-  name: string;
   id?: string;
   location: string;
   startDate: string;
