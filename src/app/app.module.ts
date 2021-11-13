@@ -11,7 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
-import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 
@@ -57,10 +57,10 @@ import { MomentPipe } from './shared/moment.pipe';
     MatDatepickerModule,
     MatDialogModule,
     MatInputModule,
-    MatMomentDateModule,
     MatRadioModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatMomentDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],
