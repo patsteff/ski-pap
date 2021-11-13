@@ -14,7 +14,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +26,7 @@ import { EventsListComponent } from './components/events/events-list/events-list
 import { EventItemComponent } from './components/events/event-item/event-item.component';
 import { EventsDialogComponent } from './components/events/events-dialog/events-dialog.component';
 import { MomentPipe } from './shared/moment.pipe';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -46,6 +46,7 @@ import { MomentPipe } from './shared/moment.pipe';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
 
     // Material
     MatSidenavModule,

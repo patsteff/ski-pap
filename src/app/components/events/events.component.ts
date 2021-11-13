@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RaceEvent } from 'src/app/shared/raceevent.model';
+import { EventService } from 'src/app/shared/services/event.service';
 import { EventsDialogComponent } from './events-dialog/events-dialog.component';
 
 @Component({
@@ -9,20 +10,21 @@ import { EventsDialogComponent } from './events-dialog/events-dialog.component';
 })
 export class EventsComponent implements OnInit {
 
-  public events: RaceEvent[] = [
-    //{
-    //  location: "Züri",
-    //  startDate: "2312",
-    //  infos: "test infos",
-    //  club: "BSV",
-    //  discipline: "DH",
-    //  tore: 36
-    // }
-  ];
+  public events: RaceEvent[] = [];
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private eventsService: EventService) { }
 
   ngOnInit(): void {
+    this.getEvents();
+  }
+
+  getEvents() {
+    this.eventsService.getEvents().subscribe((actionArray) => {
+      this.events = actionArray.map((item) => ({
+        id: item.payload.doc.id,
+        ...item.payload.doc.data() as RaceEvent,
+      }));
+    });
   }
 
   openDialog(): void {

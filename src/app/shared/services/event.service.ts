@@ -24,4 +24,8 @@ export class EventService {
       infos: event.infos
     });
   }
+
+  getEvents() {
+    return this.store.collection('events', (ref) => ref.orderBy('startDate')).snapshotChanges();
+  }
 }

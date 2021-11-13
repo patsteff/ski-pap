@@ -1,21 +1,34 @@
-<mat-card>
-  <mat-card-title>{{event?.startDate | momentPipe: 'DD.MM.YYYY'}}</mat-card-title>
-  <mat-card-content class="event-card-content" fxLayout="column">
-    <span>
-      <mat-icon class="event-card-icon">location_on</mat-icon>
-      {{event?.location}}
-    </span>
-    <span>
-      <mat-icon class="event-card-icon">downhill_skiing</mat-icon>
-      {{event?.discipline}}
-    </span>
-    <span>
-      <mat-icon class="event-card-icon">numbers</mat-icon>
-      {{event?.tore}}
-    </span>
-    <span>
-      <mat-icon class="event-card-icon">info</mat-icon>
-      {{event?.infos}}
-    </span>
+<mat-card class="event-item-card" fxLayout="column">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-card-title>{{event?.startDate | momentPipe: 'DD.MM.YYYY'}}</mat-card-title>
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <button color="primary" mat-mini-fab (click)="editEvent()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button color="primary" mat-mini-fab (click)="deleteEvent()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <mat-card-content fxLayout="row" fxLayoutAlign="space-between end">
+
+    <div fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="10px">
+      <span fxLayout="row" fxLayoutGap="10px">
+        <div class="font-md">{{event?.location}}</div>
+      </span>
+      <span fxLayout="row" fxLayoutGap="10px">
+        <div class="font-md">{{event?.tore}} Tore</div>
+      </span>
+      <span *ngIf="event?.infos" fxLayout="row" fxLayoutGap="10px">
+        <div class="font-md">{{event?.infos}}</div>
+      </span>
+    </div>
+    <div>
+      <button disabled mat-fab color="accent">
+        SL
+      </button>
+    </div>
+
   </mat-card-content>
 </mat-card>

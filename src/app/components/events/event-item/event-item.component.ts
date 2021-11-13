@@ -16,4 +16,12 @@ export class EventItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  editEvent() {
+    console.log("edit");
+  }
+
+  deleteEvent() {
+    console.log("delete");
+  }
+
 }

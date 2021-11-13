@@ -18,7 +18,7 @@ export class EventsDialogComponent {
   ) {
     this.form = fb.group({
       location: [data.location, [Validators.maxLength(30), Validators.required]],
-      startDate: [data.startDate, Validators.required],
+      startDate: [new Date(), Validators.required],
       club: ["BSV"],
       infos: [data.infos, Validators.maxLength(100)],
       discipline: [data.discipline],
