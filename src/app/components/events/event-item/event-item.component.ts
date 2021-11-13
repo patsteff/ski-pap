@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { RaceEvent } from 'src/app/shared/raceevent.model';
+import { EventService } from 'src/app/shared/services/event.service';
 
 @Component({
   selector: 'app-event-item',
@@ -11,7 +12,7 @@ export class EventItemComponent implements OnInit {
   public event: RaceEvent | undefined;
 
 
-  constructor() { }
+  constructor(private eventService: EventService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,6 @@ export class EventItemComponent implements OnInit {
 
   deleteEvent() {
     console.log("delete");
+    this.eventService.onDeleteEvent(this.event?.id!);
   }
-
 }

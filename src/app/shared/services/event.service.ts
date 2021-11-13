@@ -28,4 +28,8 @@ export class EventService {
   getEvents() {
     return this.store.collection('events', (ref) => ref.orderBy('startDate')).snapshotChanges();
   }
+
+  onDeleteEvent(id: string) {
+    this.store.collection('events').doc(id).delete();
+  }
 }
